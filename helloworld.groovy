@@ -2,7 +2,7 @@
  * Created by ascheman on 2016-06-11
  */
 
-mavenJob ("dukecon_html5_${branch}") {
+mavenJob ("helloworld") {
     scm {
         github ("ascheman/helloworld", "master")
     }
