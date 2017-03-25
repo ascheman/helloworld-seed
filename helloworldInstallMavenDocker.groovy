@@ -9,6 +9,6 @@ job ("helloworld-install-mavendocker") {
         scm("H/10 * * * *")
     }
     steps {
-        shell ('docker run -i --rm --name hello-world-install -v ~/.m2/repository:/root/.m2/repository -v "$PWD":/usr/src -w /usr/src maven:alpine mvn clean install')
+        shell ('docker run -i --rm --name hello-world-install -v ~/.m2:/root/.m2 -v "$PWD":/usr/src -w /usr/src maven:alpine mvn clean install')
     }
 }
